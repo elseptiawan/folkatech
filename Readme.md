@@ -6,7 +6,7 @@
 1. Clone this repository
 2. Make Sure Docker is running
 3. Run `docker-compose up` in the root directory
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Run API on http://localhost:3000
 
 ### Request List
 1. Generate Token
