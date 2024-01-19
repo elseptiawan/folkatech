@@ -2,7 +2,7 @@ const User = require('../repository/user');
 const redis = require('redis');
 const { param, use } = require('../routes/users');
 const client = redis.createClient({
-    // url: 'redis://redis:6379'
+    url: 'redis://redis:6379'
 });
 
 client.on('error', err => console.log('Redis Client Error', err)).connect();
