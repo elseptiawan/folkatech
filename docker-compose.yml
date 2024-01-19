@@ -58,7 +58,7 @@ services:
       - .docker/data/redis:/data
     
   # Node api service
-  api-test3:
+  node:
     build:
       context: .
       dockerfile: Dockerfile
