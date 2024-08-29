@@ -2,15 +2,6 @@
 - [Node.js](https://nodejs.org/en/)
 - [docker](https://www.docker.com/)
 
-### How to run on local
-1. Clone this repository
-2. Run `npm install` in the root directory
-3. Create `.env` file in the root directory
-4. Copy the content of `.env.example` to `.env`
-5. Configure the `.env` file
-6. Run `npm run start` in the root directory
-7. Run API on http://localhost:3000
-
 ### How to run on docker
 1. Clone this repository
 2. Make Sure Docker is running
