@@ -95,13 +95,7 @@ exports.updateUser = async (id, body) => {
             throw new Error('UserName or AccountNumber or Email or IdentityNumber already exists');
         }
         const update = await User.updateUser(id, body);
-        const redisData = await client.get('user');
-        if (redisData !== null) {
-            const data = JSON.parse(redisData);
-            const index = data.findIndex((user) => user._id === id);
-            data[index] = {...data[index], ...body};
-            await client.setEx('user', '600', JSON.stringify(data));
-        }
+        await client.del('user');
         return update;
     } catch (error) {
         throw error;
@@ -130,6 +124,7 @@ exports.deleteUser = async (id) => {
 exports.getUserByAccountNumber = async (accountNumber) => {
     try {
         const user = await User.getUser({accountNumber: accountNumber});
+        console.log(user);
         rs = {
             id: user._id,
             userName: user.userName,
