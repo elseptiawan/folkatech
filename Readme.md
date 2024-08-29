@@ -53,3 +53,6 @@
 8. Delete User
     - Endpoint: `/api/users/:id`
     - Method: `DELETE`
+
+### API Documentation
+https://documenter.getpostman.com/view/25970017/2sAXjJ7YtG
